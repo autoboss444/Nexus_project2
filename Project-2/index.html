@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Techy Software Company</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <script src="index.js"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="#" alt=""></a>
+            <div class="nav-links" id="navlinks">
+                <i class="fa-solid fa-xmark" onclick="hidemenu()"></i>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <i class="fa-solid fa-bars" onclick="showmenu()"></i>
+        </nav>
+
+        <div class="text-box">
+            <h1>Welcome to Techy Software Comapny</h1>
+            <p>we deal with software companies to build and design softwares for big companies or organizations</p>
+            <a href="#" class="hero-btn">Visit To Know More</a> 
+        </div>
+    </section>
+
+    <!-------- About us ---------->
+
+    <section class="about">
+        <h2>About Us</h2>
+        <p>Description of your company and its mission.</p>
+    </section> 
+
+    <!----------- Products --------->
+    <section class="products">
+        <h1>Our Projects</h1>
+        <div class="row">
+            <div class="product-col">
+                <img src="./assets/1.jpg" alt="project 1">
+                <h3>product1</h3>
+                <p>welocome to techy software company and wram welcome to all of the software developers to out companies meeting and seminar. we have organised many games for all of you so that you can enjoy this seminar and lets start the fun</p>
+            </div>
+            <div class="product-col">
+                <img src="./assets/1.jpg" alt="project 2">
+                <h3>product2</h3>
+                <p>welocome to techy software company and wram welcome to all of the software developers to out companies meeting and seminar. we have organised many games for all of you so that you can enjoy this seminar and lets start the fun</p>
+            </div>
+            <div class="product-col">
+                <img src="./assets/1.jpg" alt="project 3">
+                <h3>product3</h3>
+                <p>welocome to techy software company and wram welcome to all of the software developers to out companies meeting and seminar. we have organised many games for all of you so that you can enjoy this seminar and lets start the fun</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="services">
+        <h1>Our Services</h1>
+        <div class="row1">
+            <div class="service-col">
+                <h3>Web Development</h3>
+                <p>welocome to techy software company and wram welcome to all of the software developers to out companies meeting and seminar. we have organised many games for all of you so that you can enjoy this seminar and lets start the fun</p>
+            </div>
+            <div class="service-col">
+                <h3>Mobile App Development</h3>
+                <p>welocome to techy software company and wram welcome to all of the software developers to out companies meeting and seminar. we have organised many games for all of you so that you can enjoy this seminar and lets start the fun</p>
+            </div>
+            <div class="service-col">
+                <h3>product3</h3>
+                <p>welocome to techy software company and wram welcome to all of the software developers to out companies meeting and seminar. we have organised many games for all of you so that you can enjoy this seminar and lets start the fun</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+  
+        <h2 class="heading"><i class="fas fa-headset"></i> Get in <span>Touch</span></h2>
+      
+        <div class="container">
+            <div class="content">
+                <div class="image-box">
+                    <img draggable="false" src="./assets/contact1.png" alt="">
+                </div>
+            <form id="contact-form">
+            
+            <div class="form-group">
+              <div class="field">
+                <input type="text" name="name" placeholder="Name" required>
+                <i class='fas fa-user'></i>
+              </div>
+              <div class="field">
+                <input type="text" name="email" placeholder="Email" required>
+                <i class='fas fa-envelope'></i>
+              </div>
+              <div class="field">
+                <input type="text" name="phone" placeholder="Phone">
+                <i class='fas fa-phone-alt'></i>
+              </div>
+              <div class="message">
+                <textarea placeholder="Message" name="message" required></textarea>
+                <i class="fas fa-comment-dots"></i>
+              </div>
+              </div>
+            <div class="button-area">
+              <button type="submit">
+                Submit <i class="fa fa-paper-plane"></i></button>
+            </div>
+            </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2024 Techy Software Company. All rights reserved.
+    </footer>
+
+
+
+<script>
+    var navlinks = document.getElementById("navlinks")
+
+    function showmenu(){
+        navlinks.style.right="0";
+    }
+    function hidemenu(){
+        navlinks.style.right="-200px";
+    }
+        // Function to submit feedback to a server (replace with your actual endpoint)
+        function submitFeedback(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            // Mock API endpoint (replace with your actual endpoint)
+            const apiEndpoint = 'https://api.example.com/submit-feedback';
+
+            // Send the data to the server using Fetch API
+            fetch(apiEndpoint, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ name, email, message }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert('Feedback submitted successfully!');
+                // You can perform additional actions here
+            })
+            .catch(error => console.error('Error:', error));
+        }
+</script>
+
+<script src="index.js"></script>
+
+</body>
+</html>
